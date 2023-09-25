@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 250px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <img  id="bulb" src="off.png" alt="Bulbisoff">
+    <br>
+    <button onclick="turnonoff()" value="0">Turn on/off</button>
+</body>
+<script>
+    function turnonoff(){
+        v = document.getElementById('bulb').value
+        document.getElementById('bulb').alt = "Bulbison";
+        document.getElementById('bulb').value = "1";
+        if(v=="0"){
+        document.getElementById('bulb').src = "on.png";
+        document.getElementById('bulb').alt = "Bulbison";
+        document.getElementById('bulb').value = "1";
+        }
+        else{
+        document.getElementById('bulb').src = "off.png";
+        document.getElementById('bulb').alt = "Bulbisoff";
+        document.getElementById('bulb').value = "0";
+        }
+    }
+</script>
+</html>
